@@ -1,4 +1,12 @@
 # ZigStar Zigbee Gateways
+
+
+Script to run:
+  curl -s https://raw.githubusercontent.com/hoobs-org/zigstar_gateways/main/files/Tools/Scripts/Pi_Flasher_CC2538.sh > Pi_Flasher_CC2538.sh && chmod +x ./Pi_Flasher_CC2538.sh && ./Pi_Flasher_CC2538.sh
+
+
+
+
 Information and documentation on ZigStar gateways is available on [Website](https://zig-star.com) <br/> 
 Pre-assembed hardware devices can be purchased from [https://zig-star.com](https://zig-star.com) and on [Tindie](https://www.tindie.com/stores/zigstar/)<br />
 
