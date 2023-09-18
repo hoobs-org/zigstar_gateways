@@ -34,14 +34,13 @@ pip3 install pyserial intelhex
 
 echo
 echo -e "${CYAN}Cloning flash tool and firmware${NC}"
-rm -rf cc2538-bsl && rm -rf zigbee-firmware
+rm -rf cc2538-bsl && rm -rf CC1352P2_CC2652P_launchpad_coordinator_20230507.zip -rf CC1352P2_CC2652P_launchpad_coordinator_20230507.hex
 git clone https://github.com/JelmerT/cc2538-bsl.git
 wget https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip
 
 echo
 echo -e "${CYAN}Unpacking latest hex file${NC}"
-unzip -o CC1352P2_CC2652P_launchpad_coordinator_20230507.zip
-hexfile=$(ls -1 *.hex | head -1)
+unzip /CC1352P2_CC2652P_launchpad_coordinator_20230507.zip
 echo $hexfile
 
 
