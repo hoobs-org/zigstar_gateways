@@ -4,8 +4,6 @@ PORT=/dev/ttyAMA0
 RST_PIN=24
 BSL_PIN=27
 
-curl -s https://raw.githubusercontent.com/mercenaruss/zigstar_gateways/main/files/Scripts/banner.txt > logo.txt && cat logo.txt && rm logo.txt
-
 CYAN='\033[1;36m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -38,12 +36,11 @@ echo
 echo -e "${CYAN}Cloning flash tool and firmware${NC}"
 rm -rf cc2538-bsl && rm -rf zigbee-firmware
 git clone https://github.com/JelmerT/cc2538-bsl.git
-git clone https://github.com/jethome-ru/zigbee-firmware.git
+wget https://github.com/Koenkk/Z-Stack-firmware/blob/master/coordinator/Z-Stack_3.x.0/bin/CC1352P2_CC2652P_launchpad_coordinator_20230507.zip
 
 echo
 echo -e "${CYAN}Unpacking latest hex file${NC}"
-archive=$(ls -1 zigbee-firmware/ti/coordinator/cc2652/*.zip | sort -r | head -1)
-unzip -o $archive -d .
+unzip -o CC1352P2_CC2652P_launchpad_coordinator_20230507.zip
 hexfile=$(ls -1 *.hex | head -1)
 echo $hexfile
 
